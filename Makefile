@@ -21,4 +21,3 @@ qr_%.png: venv
 clean:
 	rm qr_*png
 	rm pymor.ipynb
-	

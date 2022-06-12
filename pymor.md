@@ -170,7 +170,7 @@ pyMOR is ...
 <td><img src="img/fritze.jpg"></td>
 <td><img src="img/mlinaric.jpeg"></td>
 <td><img src="img/rave.jpg"></td>
-<td><img src="img/schindler.png"></td>
+<td><img src="img/schindler.jpg"></td>
 </tr>
 <tr>
 <td>Virginia Tech
