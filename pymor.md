@@ -24,17 +24,25 @@ kernelspec:
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-<!-- # Outline
+<div class="container">
 
-##
+<div>
 
-## What is pyMOR?
+# Get the slides
 
-## Reduced Basis Methods with pyMOR
+## <https://github.com/renefritze/22-esco-pyMOR>
 
-## System-Theoretic Methods with pyMOR
+- README has a link to execute the presentation on mybinder.org
 
-+++ {"slideshow": {"slide_type": "slide"}} -->
+</div>
+
+<div>
+<img src="qr_self.png" />
+</div>
+</div>
+
++++ {"slideshow": {"slide_type": "slide"}}
+
 
 <div class="container">
 
@@ -44,7 +52,7 @@ kernelspec:
 
 ## August 22-26th
 
-<https://school.pymor.org/>
+## <https://school.pymor.org/>
 
 - 5 day course on pyMOR
 - no participation fee
@@ -204,51 +212,8 @@ pyMOR is ...
 - minimal installation:
 
   ```
-  pip3 install pymor
+  python -m pip install pymor
   ```
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-### Installing pyMOR using pip
-
-- all bells and whistles
-
-  ```
-  pip3 install pymor[full]  # needed for GUI
-  pip3 install mpi4py  # requires C compiler / MPI headers
-  pip3 install slycot  # requires Fortran / OpenBLAS headers
-  ```
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-### Installing pyMOR using conda
-
-- all bells and whistles
-
-  ```
-  conda install -c conda-forge pymor
-  conda install -c conda-forge slycot
-  conda install -c conda-forge pytorch
-  conda install -c conda-forge fenics # not on windows
-  ```
-
-<!-- Avoid mixing [conda-forge](https://conda-forge.org) with other channels,
-
-  ```
-  conda config --set channel_priority strict
-  ```
-
-and use a separate environment. (NGSolve is incompatible.) -->
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-### Using the docker container
-
-```
-docker pull pymor/demo:main
-```
-
-Comes with everything pre-installed, including FEniCS and NGSolve.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -299,31 +264,13 @@ print_defaults()
 | `pymor.tools`                  | non MOR-specific support code (pprint/floatcmp, ...) |
 | **`pymor.vectorarrays`**       | `VectorArray` interface/implementations              |
 
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-## Getting help
-
-- pyMOR's documentation can be found at
-
-  > <https://docs.pymor.org>
-
-- Be sure to read the [introduction](https://docs.pymor.org/2021-1-0/getting_started.html),
-  the [technical overview](https://docs.pymor.org/2021-1-0/technical_overview.html) and
-  the [tutorials](https://docs.pymor.org/2021-1-0/tutorials.html).
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-- Ask questions on
-
-  > <https://github.com/pymor/pymor/discussions>
-
 +++ {"slideshow": {"slide_type": "slide"}}
 
 # Reduced Basis Methods with pyMOR
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-## Building the FOM
+## Building the Full Order Model (FOM)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
