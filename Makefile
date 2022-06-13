@@ -1,4 +1,4 @@
-presentation: pymor.ipynb venv qr_school_website.png qr_docs.png
+presentation: pymor.ipynb venv qr_school_website.png qr_docs.png qr_self.png
 	. venv/bin/activate ; jupyter notebook pymor.md
 
 pymor.ipynb: venv

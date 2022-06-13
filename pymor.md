@@ -22,19 +22,27 @@ kernelspec:
 
 ## René Fritze
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
-<!-- # Outline
+<div class="container">
 
-##
+<div>
 
-## What is pyMOR?
+# Get the slides
 
-## Reduced Basis Methods with pyMOR
+## <https://renefritze.github.io/22-esco-pyMOR>
 
-## System-Theoretic Methods with pyMOR
+- README has a link to execute the presentation on mybinder.org
 
-+++ {"slideshow": {"slide_type": "slide"}} -->
+</div>
+
+<div>
+<img src="qr_self.png" />
+</div>
+</div>
+
++++ {"slideshow": {"slide_type": "slide"}}
+
 
 <div class="container">
 
@@ -44,7 +52,7 @@ kernelspec:
 
 ## August 22-26th
 
-<https://school.pymor.org/>
+## <https://school.pymor.org/>
 
 - 5 day course on pyMOR
 - no participation fee
@@ -102,7 +110,7 @@ pyMOR is ...
 
 - Started 2012, 22k lines of code, 7k commits.
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Design Goal 1
 
@@ -113,7 +121,7 @@ pyMOR is ...
 - Small NumPy/SciPy-based discretization toolkit for easy prototyping.
 - `VectorArray`, `Operator`, `Model` interfaces for seamless integration with high-performance PDE solvers.
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Design Goal 2
 
@@ -123,7 +131,7 @@ pyMOR is ...
 
 - Implement RB and system-theoretic methods in one common language.
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ## Implemented Algorithms
 
@@ -133,7 +141,7 @@ pyMOR is ...
 - Interpolation of arbitrary (nonlinear) operators, EI-Greedy, DEIM.
 - A posteriori error estimation.
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ## Implemented Algorithms
 
@@ -141,7 +149,7 @@ pyMOR is ...
 - Iterative linear solvers, eigenvalue computation, Newton algorithm, time-stepping algorithms.
 - Non-intrusive MOR using artificial neural networks.
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ## PDE Solvers: Official Support
 
@@ -149,7 +157,7 @@ pyMOR is ...
 - [FEniCS](https://fenicsproject.org)
 - [NGSolve](https://ngsolve.org)
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ## PDE Solvers: Used with
 
@@ -159,7 +167,7 @@ pyMOR is ...
 - file I/O, e.g. [COMSOL](https://comsol.com)
 - ...
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ## pyMOR Development
 
@@ -193,64 +201,21 @@ pyMOR is ...
 - everyone can/should(!) contribute
 - everyone can become main developer
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ## Installing pyMOR
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Installing pyMOR using pip
 
 - minimal installation:
 
   ```
-  pip3 install pymor
+  python -m pip install pymor
   ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-### Installing pyMOR using pip
-
-- all bells and whistles
-
-  ```
-  pip3 install pymor[full]  # needed for GUI
-  pip3 install mpi4py  # requires C compiler / MPI headers
-  pip3 install slycot  # requires Fortran / OpenBLAS headers
-  ```
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-### Installing pyMOR using conda
-
-- all bells and whistles
-
-  ```
-  conda install -c conda-forge pymor
-  conda install -c conda-forge slycot
-  conda install -c conda-forge pytorch
-  conda install -c conda-forge fenics # not on windows
-  ```
-
-<!-- Avoid mixing [conda-forge](https://conda-forge.org) with other channels,
-
-  ```
-  conda config --set channel_priority strict
-  ```
-
-and use a separate environment. (NGSolve is incompatible.) -->
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-### Using the docker container
-
-```
-docker pull pymor/demo:main
-```
-
-Comes with everything pre-installed, including FEniCS and NGSolve.
-
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Using our Binderhub
 
@@ -258,7 +223,7 @@ Go to
 
 > <https://mybinder.org/v2/gh/pymor/pymor/2021.2.0>
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ## Hello pyMOR
 
@@ -274,13 +239,13 @@ pymor.config
 ```{code-cell} ipython3
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: slide
 ---
 from pymor.basic import *
 print_defaults()
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ## Subpackages of the pymor Package
 
@@ -299,33 +264,15 @@ print_defaults()
 | `pymor.tools`                  | non MOR-specific support code (pprint/floatcmp, ...) |
 | **`pymor.vectorarrays`**       | `VectorArray` interface/implementations              |
 
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-## Getting help
-
-- pyMOR's documentation can be found at
-
-  > <https://docs.pymor.org>
-
-- Be sure to read the [introduction](https://docs.pymor.org/2021-1-0/getting_started.html),
-  the [technical overview](https://docs.pymor.org/2021-1-0/technical_overview.html) and
-  the [tutorials](https://docs.pymor.org/2021-1-0/tutorials.html).
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-- Ask questions on
-
-  > <https://github.com/pymor/pymor/discussions>
-
 +++ {"slideshow": {"slide_type": "slide"}}
 
 # Reduced Basis Methods with pyMOR
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
-## Building the FOM
+## Building the Full Order Model (FOM)
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### The Thermal Block Problem
 
@@ -346,7 +293,7 @@ f(x)      &= 1.
 
 satisfying $\overline{\Omega} = \overline{\dot{\bigcup}_{i=1}^{Q} \Omega_q}$.
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Setting up an analytical description of the thermal block problem
 
@@ -365,7 +312,7 @@ Our problem is parameterized:
 p.parameters
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Looking at the definition
 
@@ -375,7 +322,7 @@ We can easily look at the definition of `p` by printing its `repr`:
 p
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Building a discrete model
 
@@ -394,7 +341,7 @@ fom, data = discretize_stationary_cg(p, diameter=1/100)
 fom.parameters
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Looking at the model
 
@@ -404,7 +351,7 @@ fom.parameters
 fom
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Note
 
@@ -413,7 +360,7 @@ fom
 
 > Everything that follows works the same for a FOM built using an external PDE solver.
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Solving the FOM
 
@@ -443,7 +390,7 @@ U
 
 > There is not the notion of a single vector in pyMOR! Don't try to get hold of one!
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Some words about VectorArrays
 
@@ -461,7 +408,7 @@ Its dimension gives you the *uniform* size of each vector in the array:
 U.dim
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Supported Operations
 
@@ -477,7 +424,7 @@ U.dim
 | `norm`           | list of norms                                          |
 | `append`         | append vectors from another array                      |
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Playing a bit with VectorArrays
 
@@ -498,7 +445,7 @@ for mu in p.parameter_space.sample_randomly(10):
 # your code here ...
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Indexing
 
@@ -516,7 +463,7 @@ V_indexed *= 0
 V.norm()
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Looking at the solution
 
@@ -526,7 +473,7 @@ We can use the `visualize` method to plot the solution:
 fom.visualize(U)
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Looking at the solution
 
@@ -536,7 +483,7 @@ An array with multiple elements is visualized as a time-series:
 fom.visualize(V)
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Is the solution really a solution?
 
@@ -550,7 +497,7 @@ U = fom.solve(mu)
 
 > If you implement a `Model`, make sure that `solve` really returns solutions with zero residual!
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### So how is `fom.rhs` defined?
 
@@ -569,11 +516,11 @@ from pymor.tools.formatsrc import print_source
 print_source(fom.rhs.as_vector)
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ## Reducing the FOM
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Building an approximation space
 
@@ -592,7 +539,7 @@ It's a good idea, to orthonormalize the basis:
 basis = gram_schmidt(snapshots)
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Projecting the Model
 
@@ -609,7 +556,7 @@ Every reductor has a `reduce` method, which builds the ROM:
 rom = reductor.reduce()
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Comparing ROM and FOM
 
@@ -621,7 +568,7 @@ fom
 rom
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Solving the ROM
 
@@ -648,7 +595,7 @@ A high-dimensional representation is obtained from the `reductor`:
 U_rom = reductor.reconstruct(u_rom)
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Computing the MOR error
 
@@ -668,7 +615,7 @@ and look at it:
 fom.visualize(ERR)
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Certified Reduced Basis Method
 
@@ -698,7 +645,7 @@ print(greedy_data.keys())
 rom = greedy_data['rom']
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Testing the ROM
 
@@ -720,7 +667,7 @@ and compare it with the estimated error:
 rom.estimate_error(mu)
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Is it faster?
 
@@ -740,7 +687,7 @@ t_rom = perf_counter() - tic
 print(f'Speedup: {t_fom/t_rom}')
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Some things to try
 
@@ -756,7 +703,7 @@ print(f'Speedup: {t_fom/t_rom}')
 
 # System-Theoretic Methods with pyMOR
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ## Building the FOM
 
@@ -776,7 +723,7 @@ print(f'Speedup: {t_fom/t_rom}')
 ```{code-cell} ipython3
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: slide
 ---
 import numpy as np
 from pymor.basic import *
@@ -805,7 +752,7 @@ slideshow:
 print(lti)
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### FOM Poles
 
@@ -815,7 +762,7 @@ poles = lti.poles()
 _ = plt.plot(poles.real, poles.imag, '.')
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### FOM Hankel Singular Values
 
@@ -823,7 +770,7 @@ _ = plt.plot(poles.real, poles.imag, '.')
 _ = plt.semilogy(range(1, n + 1), lti.hsv(), '.-')
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### FOM Bode Plot
 
@@ -832,7 +779,7 @@ w = np.logspace(-4, 4, 200)
 _ = lti.bode_plot(w)
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Balanced Truncation
 
@@ -855,7 +802,7 @@ rom_bt = bt.reduce(10)
 ```{code-cell} ipython3
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: slide
 ---
 rom_bt
 ```
@@ -872,7 +819,7 @@ print(rom_bt)
 rom_bt.to_matrices()
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### ROM poles
 
@@ -883,7 +830,7 @@ _ = plt.plot(poles.real, poles.imag, '.')
 _ = plt.plot(poles_rom.real, poles_rom.imag, 'x')
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### ROM Hankel Singular Values
 
@@ -892,7 +839,7 @@ _ = plt.semilogy(range(1, n + 1), lti.hsv(), '.-')
 _ = plt.semilogy(range(1, 11), rom_bt.hsv(), '.-')
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### ROM Bode Plot
 
@@ -902,7 +849,7 @@ _ = lti.bode_plot(w, ax=ax)
 _ = rom_bt.bode_plot(w, ax=ax, linestyle='--')
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Error Magnitude Plot
 

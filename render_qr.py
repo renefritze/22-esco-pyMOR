@@ -18,3 +18,4 @@ def make_link(url: str, filename: str) -> None:
 
 make_link("https://school.pymor.org", "qr_school_website.png")
 make_link("https://docs.pymor.org", "qr_docs.png")
+make_link("https://github.com/renefritze/22-esco-pyMOR", "qr_self.png")
