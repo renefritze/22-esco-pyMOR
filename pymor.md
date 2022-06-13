@@ -10,6 +10,8 @@ kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
   name: python3
+livereveal:
+  autolaunch: true
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -30,7 +32,7 @@ kernelspec:
 
 # Get the slides
 
-## <https://renefritze.github.io/22-esco-pyMOR>
+## <https://rene.fritze.me/22-esco-pyMOR>
 
 - README has a link to execute the presentation on mybinder.org
 
@@ -42,7 +44,6 @@ kernelspec:
 </div>
 
 +++ {"slideshow": {"slide_type": "slide"}}
-
 
 <div class="container">
 
