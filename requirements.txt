@@ -1,3 +1,4 @@
 pymor[full]
 rise
 jupytext
+ipywidgets
