@@ -10,8 +10,6 @@ kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
   name: python3
-livereveal:
-  autolaunch: true
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -34,7 +32,7 @@ livereveal:
 
 ## <https://rene.fritze.me/22-esco-pyMOR>
 
-- README has a link to execute the presentation on mybinder.org
+README has a link to execute the presentation on mybinder.org
 
 </div>
 
@@ -52,6 +50,8 @@ livereveal:
 # pyMOR School 2022
 
 ## August 22-26th
+
+## Magdeburg, Germany
 
 ## <https://school.pymor.org/>
 
@@ -93,10 +93,6 @@ livereveal:
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-pyMOR is ...
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
 - a software library for writing **M**odel **O**rder **R**eduction applications
 
 +++ {"slideshow": {"slide_type": "fragment"}}
@@ -110,6 +106,28 @@ pyMOR is ...
 +++ {"slideshow": {"slide_type": "fragment"}}
 
 - Started 2012, 22k lines of code, 7k commits.
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+### MOR??
+
+## Have
+
+a (parameterized) PDE/LTI system
+
+## Need to solve
+
+1. for lots of parameters/inputs
+2. really fast for a single parameter
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+### MOR??
+
+## Solution
+
+Build a lower dimensional approximation for the solution space,
+solve there instead.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -181,7 +199,7 @@ pyMOR is ...
 <td><img src="img/rave.jpg"></td>
 <td><img src="img/schindler.jpg"></td>
 </tr>
-<tr>
+<!-- <tr>
 <td>Virginia Tech
 </td>
 <td>WWU Münster
@@ -192,25 +210,20 @@ pyMOR is ...
 </td>
 <td>Arup
 </td>
-</tr>
+</tr> -->
 </table>
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "slides"}}
 
 ### Contributions
 
 - everyone can/should(!) contribute
 - everyone can become main developer
+- not just code contributions are valued!
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## Installing pyMOR
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-### Installing pyMOR using pip
-
-- minimal installation:
+## Minimal pyMOR installation
 
   ```
   python -m pip install pymor
@@ -218,11 +231,11 @@ pyMOR is ...
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-### Using our Binderhub
+## Minimal pyMOR installation
 
-Go to
-
-> <https://mybinder.org/v2/gh/pymor/pymor/2021.2.0>
+  ```
+  conda install -c conda-forge pymor
+  ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -868,6 +881,22 @@ print(err_bt.hinf_norm() / lti.hinf_norm())
 print(err_bt.h2_norm() / lti.h2_norm())
 ```
 
++++ {"slideshow": {"slide_type": "slide"}}
+
 # Complex Application
 
 <https://mybinder.org/v2/gh/renefritze/NCD-corrected-TR-RB-approach-for-pde-opt/HEAD?filepath=notebooks%2FPaper1_simulations%2FModel_Problem_2_EXC_10_Parameters_1e-6%2FAll_BFGS_methods_in_EXC10-TEST1.ipynb>
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+<div class="container">
+
+<div>
+
+# Get the slides
+
+## <https://rene.fritze.me/22-esco-pyMOR>
+
+README has a link to execute the presentation on mybinder.org
+
+</div>
