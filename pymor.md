@@ -902,3 +902,8 @@ print(err_bt.h2_norm() / lti.h2_norm())
 README has a link to execute the presentation on mybinder.org
 
 </div>
+
+<div>
+<img src="qr_self.png" />
+</div>
+</div>
