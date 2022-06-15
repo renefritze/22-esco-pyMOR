@@ -1,0 +1,33 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.2.0
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: check-yaml
+        # this is needed to validate `!reference` objects in gitlab-ci.yml
+        args: ["--unsafe"]
+    -   id: check-added-large-files
+    -   id: check-executables-have-shebangs
+    -   id: check-case-conflict
+    -   id: check-symlinks
+
+-   repo: https://github.com/psf/black
+    rev: "22.3.0"
+    hooks:
+    -   id: black
+
+- repo: https://github.com/thibaudcolas/curlylint
+  rev: "v0.13.1"
+  hooks:
+    - id: curlylint
+      additional_dependencies: ['click==8.0.4']
+
+- repo: https://github.com/WWU-AMM/texthooks
+  rev: "0.3.0"
+  hooks:
+    - id: replace-characters
+    - id: forbid-bidi-controls
+    - id: fix-smartquotes
