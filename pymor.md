@@ -10,8 +10,6 @@ kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
   name: python3
-livereveal:
-  autolaunch: true
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -504,7 +502,6 @@ U = fom.solve(mu)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-
 ## Reducing the FOM
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -558,6 +555,7 @@ rom = reductor.reduce()
 ```{code-cell} ipython3
 fom
 ```
+
 +++ {"slideshow": {"slide_type": "slide"}}
 
 ### Comparing ROM and FOM
@@ -697,7 +695,6 @@ t_rom = perf_counter() - tic
 ### Yes, it is
 
 ```{code-cell} ipython3
-
 print(f'Speedup: {t_fom/t_rom}')
 ```
 
