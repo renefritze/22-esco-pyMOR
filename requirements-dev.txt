@@ -54,7 +54,7 @@ jupytext==1.13.8
 kiwisolver==1.4.3
 latexcodec==2.0.1
 lazy-object-proxy==1.7.1
-lxml==4.9.0
+lxml==4.9.1
 markdown-it-py==2.1.0
 MarkupSafe==2.1.1
 matplotlib==3.5.2
